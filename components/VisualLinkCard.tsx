@@ -1,0 +1,97 @@
+import React from 'react';
+import { ChevronRight, PlayCircle } from 'lucide-react';
+import { LinkCardProps } from '../types';
+
+export const VisualLinkCard: React.FC<LinkCardProps> = ({ 
+  title, 
+  subtitle, 
+  buttonText, 
+  imageUrl, 
+  theme, 
+  onClick,
+  type
+}) => {
+  // Theme configuration based on the brand manual colors
+  // Strictly using: #eaddd5, #9d6a6b, #cea29b, #f6f5f2, #d8d4c9
+  const themeStyles = {
+    light: {
+      bg: 'bg-[#f6f5f2]',
+      textPrimary: 'text-[#9d6a6b]',
+      textSecondary: 'text-[#cea29b]',
+      buttonBg: 'bg-[#cea29b]',
+      buttonText: 'text-[#f6f5f2]',
+      badgeBg: 'bg-[#d8d4c9]',
+      badgeText: 'text-[#f6f5f2]'
+    },
+    peach: {
+      bg: 'bg-gradient-to-r from-[#eaddd5] to-[#cea29b]',
+      textPrimary: 'text-[#9d6a6b]',
+      textSecondary: 'text-[#f6f5f2]',
+      buttonBg: 'bg-[#9d6a6b]',
+      buttonText: 'text-[#f6f5f2]',
+      badgeBg: 'bg-[#9d6a6b]',
+      badgeText: 'text-[#f6f5f2]'
+    },
+    dark: {
+      bg: 'bg-[#9d6a6b]', // Brand "Dark" color (Deep Mauve)
+      textPrimary: 'text-[#f6f5f2]',
+      textSecondary: 'text-[#eaddd5]',
+      buttonBg: 'bg-[#eaddd5]',
+      buttonText: 'text-[#9d6a6b]',
+      badgeBg: 'bg-[#cea29b]',
+      badgeText: 'text-[#f6f5f2]'
+    }
+  };
+
+  const currentTheme = themeStyles[theme];
+
+  return (
+    <div 
+      onClick={onClick}
+      className={`relative w-full overflow-hidden rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 transform cursor-pointer group h-40 sm:h-48 ${currentTheme.bg}`}
+    >
+      <div className="flex h-full">
+        {/* Left Content */}
+        <div className="flex-1 p-5 flex flex-col justify-center z-10 relative">
+          {type === 'course' && (
+            <div className={`inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest mb-2 w-fit px-2 py-0.5 rounded ${currentTheme.badgeBg} ${currentTheme.badgeText}`}>
+              <PlayCircle size={10} />
+              Curso Online
+            </div>
+          )}
+          
+          {subtitle && (
+             <h3 className={`text-sm sm:text-base font-light mb-0 leading-tight ${currentTheme.textSecondary}`}>
+              {subtitle}
+            </h3>
+          )}
+
+          <h2 className={`text-lg sm:text-2xl font-bold leading-none mb-4 ${currentTheme.textPrimary}`}>
+            {title}
+          </h2>
+
+          <button className={`mt-auto w-fit px-4 py-2 rounded text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors flex items-center gap-1 ${currentTheme.buttonBg} ${currentTheme.buttonText}`}>
+            {buttonText}
+            <ChevronRight size={14} />
+          </button>
+        </div>
+
+        {/* Right Image Container - Simulating the cutout look */}
+        <div className="w-1/3 sm:w-2/5 relative h-full">
+          {/* Decorative Circle Background behind image */}
+          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-full blur-2xl opacity-60 ${theme === 'dark' ? 'bg-[#cea29b]' : 'bg-[#eaddd5]'}`} />
+          
+          <img 
+            src={imageUrl || "https://picsum.photos/300/300"} 
+            alt={title}
+            className="absolute bottom-0 right-0 w-full h-[90%] object-cover object-top mask-image-linear"
+            style={{
+              maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
