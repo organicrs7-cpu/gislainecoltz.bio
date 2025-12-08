@@ -93,7 +93,7 @@ const App: React.FC = () => {
             title="Cursos Presenciais"
             buttonText="Acesse Agora"
             theme="dark"
-            imageUrl="https://picsum.photos/id/447/400/400"
+            imageUrl="/images/card-cursos-presenciais.jpg"
             onClick={() => handleNavigation('#presenciais')}
           />
 
@@ -104,7 +104,7 @@ const App: React.FC = () => {
             subtitle="Método Exclusivo"
             buttonText="Começar Agora"
             theme="peach"
-            imageUrl="https://picsum.photos/id/338/400/400"
+            imageUrl="/images/card-curso-drenagem.jpg"
             onClick={() => handleNavigation('#drenagem')}
           />
 
@@ -115,7 +115,7 @@ const App: React.FC = () => {
             subtitle="Clínica Estética"
             buttonText="Entre em Contato"
             theme="light"
-            imageUrl="https://picsum.photos/id/106/400/400"
+            imageUrl="/images/card-agendar.jpg"
             onClick={() => handleNavigation('#agendar')}
           />
 
