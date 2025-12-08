@@ -41,34 +41,46 @@ const App: React.FC = () => {
 
       <div className="max-w-md mx-auto min-h-screen pb-20 bg-[#f6f5f2]/60 backdrop-blur-xl shadow-2xl border-x border-[#eaddd5]/40">
 
-        {/* Hero Section - Large Image with Title */}
-        <header className="relative overflow-hidden">
-          {/* Hero Image Container */}
-          <div className="relative w-full h-[450px] overflow-hidden">
-            {/* Gradient Overlay for smooth fade at bottom */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#f6f5f2]/80 z-10"></div>
+        {/* Hero Section - Modern & Compact */}
+        <header className="relative overflow-hidden pb-8">
+          {/* Hero Image Container - Reduced Height */}
+          <div className="relative w-full h-[380px] overflow-hidden group">
+            {/* Gradient Overlay for integration */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#f6f5f2]/20 to-[#f6f5f2] z-10"></div>
 
-            {/* Main Hero Image */}
+            {/* Main Hero Image with Hover Effect */}
             <img
               src="/images/gislaine-perfil.png"
               alt="Gislaine Coltz"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-top transform transition-transform duration-[2s] ease-in-out group-hover:scale-105"
               style={{
                 objectPosition: 'center 15%',
-                maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)',
-                WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)'
+                maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)'
               }}
             />
           </div>
 
-          {/* Title Section */}
-          <div className="relative -mt-12 pb-8 px-6 text-center">
-            <h1 className="text-3xl md:text-4xl font-bold tracking-[0.15em] text-[#5a5a5a] mb-6 uppercase">
-              LINKS IMPORTANTES
-            </h1>
+          {/* Title Section - Modern & Impactful */}
+          <div className="relative -mt-16 px-6 text-center z-20">
+            <div className="inline-block relative">
+              {/* Decorative Blur behind text */}
+              <div className="absolute inset-0 bg-[#f6f5f2]/80 blur-xl -z-10 rounded-full"></div>
 
-            {/* Decorative Line */}
-            <div className="w-full h-[2px] bg-[#9d6a6b]/80 mx-auto"></div>
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#9d6a6b] via-[#cea29b] to-[#9d6a6b] bg-[length:200%_auto] animate-gradient">
+                  GISLAINE COLTZ
+                </span>
+              </h1>
+            </div>
+
+            <div className="flex items-center justify-center gap-3 mt-2 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
+              <span className="h-[1px] w-8 bg-[#cea29b]"></span>
+              <p className="text-xs md:text-sm uppercase tracking-[0.25em] text-[#5a5a5a] font-medium">
+                Estética de Alta Performance
+              </p>
+              <span className="h-[1px] w-8 bg-[#cea29b]"></span>
+            </div>
           </div>
         </header>
 
