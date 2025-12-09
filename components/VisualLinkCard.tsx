@@ -56,7 +56,7 @@ export const VisualLinkCard: React.FC<LinkCardProps> = ({
           {type === 'course' && (
             <div className={`inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest mb-2 w-fit px-2 py-0.5 rounded ${currentTheme.badgeBg} ${currentTheme.badgeText}`}>
               <PlayCircle size={10} />
-              Curso Online
+              Curso Presencial
             </div>
           )}
 
@@ -77,14 +77,14 @@ export const VisualLinkCard: React.FC<LinkCardProps> = ({
         </div>
 
         {/* Right Image Container - Simulating the cutout look */}
-        <div className="w-1/3 sm:w-2/5 relative h-full">
+        <div className="w-2/5 sm:w-1/2 relative h-full">
           {/* Decorative Circle Background behind image */}
-          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-full blur-2xl opacity-60 ${theme === 'dark' ? 'bg-[#cea29b]' : 'bg-[#eaddd5]'}`} />
+          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 sm:w-48 sm:h-48 rounded-full blur-2xl opacity-60 ${theme === 'dark' ? 'bg-[#cea29b]' : 'bg-[#eaddd5]'}`} />
 
           <img
             src={imageUrl || "https://picsum.photos/300/300"}
             alt={title}
-            className="absolute bottom-0 right-0 w-full h-[90%] object-cover object-top mask-image-linear"
+            className="absolute bottom-0 right-0 w-full h-full object-cover object-top mask-image-linear"
             style={{
               maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
               WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'

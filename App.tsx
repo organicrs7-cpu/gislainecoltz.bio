@@ -87,7 +87,7 @@ const App: React.FC = () => {
           <VisualLinkCard
             type="course"
             title="Cursos Presenciais"
-            buttonText="Saiba Mais"
+            buttonText="Vagas Fechadas"
             theme="dark"
             imageUrl="/images/card-cursos-new.png"
             onClick={() => handleNavigation(WHATSAPP_LINK)}
@@ -98,7 +98,7 @@ const App: React.FC = () => {
             type="course"
             title="Curso de Drenagem"
             subtitle="Método Exclusivo"
-            buttonText="Começar Agora"
+            buttonText="Entrar na Lista VIP"
             theme="peach"
             imageUrl="/images/card-drenagem-new.png"
             onClick={() => handleNavigation(WHATSAPP_LINK)}
@@ -108,7 +108,7 @@ const App: React.FC = () => {
           <VisualLinkCard
             type="booking"
             title="Agendar Atendimento"
-            subtitle="Clínica Estética"
+            subtitle="Consultório de Massoterapia"
             buttonText="Chamar no WhatsApp"
             theme="light"
             imageUrl="/images/card-agendar-new.png"
@@ -148,14 +148,14 @@ const App: React.FC = () => {
 
           <div className="flex flex-col items-center justify-center gap-4 text-sm text-[#9d6a6b] relative z-10">
 
-            <a href="tel:+5551999863352" className="flex items-center gap-2 hover:text-[#cea29b] transition-colors bg-[#f6f5f2]/50 px-4 py-2 rounded-full shadow-sm">
+            <a href="tel:+5551999596176" className="flex items-center gap-2 hover:text-[#cea29b] transition-colors bg-[#f6f5f2]/50 px-4 py-2 rounded-full shadow-sm">
               <Phone size={16} className="text-[#9d6a6b]" />
-              <span className="font-medium">(51) 99986-3352</span>
+              <span className="font-medium">(51) 99959-6176</span>
             </a>
 
             <div className="flex items-start gap-2 max-w-[280px] text-center justify-center hover:text-[#cea29b] transition-colors cursor-pointer mt-2">
               <MapPin size={16} className="text-[#9d6a6b] mt-0.5 shrink-0" />
-              <span>Av. Benjamin Constant, 852 - sala 504<br />Centro, Lajeado - RS</span>
+              <span>Rua Fialho de Vargas num 49 sala 403</span>
             </div>
 
             <div className="mt-8 opacity-30 hover:opacity-100 transition-opacity duration-500">
