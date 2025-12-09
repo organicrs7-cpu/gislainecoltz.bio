@@ -15,33 +15,28 @@ const COLORS = {
 
 const App: React.FC = () => {
 
+  const WHATSAPP_LINK = "https://wa.me/message/RTNL6F7Y3IASO1";
+
   const handleNavigation = (url: string) => {
     window.open(url, '_blank');
   };
 
   return (
-    <div className="min-h-screen w-full relative overflow-x-hidden selection:bg-[#cea29b] selection:text-[#f6f5f2] font-['Poppins']">
-      {/* Background - Modern Mesh Gradient */}
-      <div className="fixed inset-0 -z-10 h-full w-full bg-[#f6f5f2]">
-        {/* Top Right - Peach */}
-        <div className="absolute top-[-10%] right-[-5%] h-[500px] w-[500px] rounded-full bg-[#cea29b]/20 blur-[120px] animate-pulse" style={{ animationDuration: '10s' }} />
+    <div className="min-h-screen w-full relative overflow-x-hidden selection:bg-[#cea29b] selection:text-[#f6f5f2] font-['Poppins'] bg-[#f6f5f2]">
+      {/* Background - Animated Modern Tech Mesh */}
+      <div className="fixed inset-0 -z-10 h-full w-full bg-[#f6f5f2] overflow-hidden">
+        {/* Animated Orbs */}
+        <div className="absolute top-[-10%] left-[-10%] w-72 h-72 bg-[#eaddd5] rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" />
+        <div className="absolute top-[-10%] right-[-10%] w-72 h-72 bg-[#cea29b] rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000" />
+        <div className="absolute bottom-[-20%] left-[20%] w-72 h-72 bg-[#9d6a6b] rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000" />
 
-        {/* Top Left - Primary Light */}
-        <div className="absolute top-[-10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-[#eaddd5]/50 blur-[120px]" />
-
-        {/* Bottom Left - Accent */}
-        <div className="absolute bottom-[-10%] left-[-5%] h-[500px] w-[500px] rounded-full bg-[#d8d4c9]/40 blur-[120px]" />
-
-        {/* Center Right - Primary Dark (subtle) */}
-        <div className="absolute top-[40%] right-[-10%] h-[400px] w-[400px] rounded-full bg-[#9d6a6b]/5 blur-[150px]" />
-
-        {/* Noise overlay for texture */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}></div>
+        {/* Tech Grid overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(157,106,107,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(157,106,107,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
       </div>
 
-      <div className="max-w-md mx-auto min-h-screen pb-20 bg-[#f6f5f2]/60 backdrop-blur-xl shadow-2xl border-x border-[#eaddd5]/40">
+      <div className="max-w-md mx-auto min-h-screen pb-20 bg-[#f6f5f2]/30 backdrop-blur-md shadow-2xl border-x border-[#ffffff]/50">
 
-        {/* Hero Section - Modern & Compact (Headshot Focus) */}
+        {/* Header Section - Modern & Compact (Headshot Focus) */}
         <header className="relative overflow-hidden pb-4">
           {/* Hero Image Container - Increased Height to prevent head crop */}
           <div className="relative w-full h-[400px] overflow-hidden group">
@@ -92,10 +87,10 @@ const App: React.FC = () => {
           <VisualLinkCard
             type="course"
             title="Cursos Presenciais"
-            buttonText="Acesse Agora"
+            buttonText="Saiba Mais"
             theme="dark"
             imageUrl="/images/card-cursos-new.png"
-            onClick={() => handleNavigation('#presenciais')}
+            onClick={() => handleNavigation(WHATSAPP_LINK)}
           />
 
           {/* Card 4: Drenagem Online (Requested) */}
@@ -106,7 +101,7 @@ const App: React.FC = () => {
             buttonText="Começar Agora"
             theme="peach"
             imageUrl="/images/card-drenagem-new.png"
-            onClick={() => handleNavigation('#drenagem')}
+            onClick={() => handleNavigation(WHATSAPP_LINK)}
           />
 
           {/* Card 5: Agendar Atendimento */}
@@ -114,10 +109,10 @@ const App: React.FC = () => {
             type="booking"
             title="Agendar Atendimento"
             subtitle="Clínica Estética"
-            buttonText="Entre em Contato"
+            buttonText="Chamar no WhatsApp"
             theme="light"
             imageUrl="/images/card-agendar-new.png"
-            onClick={() => handleNavigation('#agendar')}
+            onClick={() => handleNavigation(WHATSAPP_LINK)}
           />
 
           {/* Secondary Links Section */}

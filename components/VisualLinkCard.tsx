@@ -2,12 +2,12 @@ import React from 'react';
 import { ChevronRight, PlayCircle } from 'lucide-react';
 import { LinkCardProps } from '../types';
 
-export const VisualLinkCard: React.FC<LinkCardProps> = ({ 
-  title, 
-  subtitle, 
-  buttonText, 
-  imageUrl, 
-  theme, 
+export const VisualLinkCard: React.FC<LinkCardProps> = ({
+  title,
+  subtitle,
+  buttonText,
+  imageUrl,
+  theme,
   onClick,
   type
 }) => {
@@ -46,9 +46,9 @@ export const VisualLinkCard: React.FC<LinkCardProps> = ({
   const currentTheme = themeStyles[theme];
 
   return (
-    <div 
+    <div
       onClick={onClick}
-      className={`relative w-full overflow-hidden rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 transform cursor-pointer group h-40 sm:h-48 ${currentTheme.bg}`}
+      className={`relative w-full overflow-hidden rounded-xl shadow-lg hover:shadow-2xl hover:shadow-[#9d6a6b]/10 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 transform cursor-pointer group h-40 sm:h-48 border border-white/20 ring-1 ring-white/10 ${currentTheme.bg}`}
     >
       <div className="flex h-full">
         {/* Left Content */}
@@ -59,9 +59,9 @@ export const VisualLinkCard: React.FC<LinkCardProps> = ({
               Curso Online
             </div>
           )}
-          
+
           {subtitle && (
-             <h3 className={`text-sm sm:text-base font-light mb-0 leading-tight ${currentTheme.textSecondary}`}>
+            <h3 className={`text-sm sm:text-base font-light mb-0 leading-tight ${currentTheme.textSecondary}`}>
               {subtitle}
             </h3>
           )}
@@ -80,9 +80,9 @@ export const VisualLinkCard: React.FC<LinkCardProps> = ({
         <div className="w-1/3 sm:w-2/5 relative h-full">
           {/* Decorative Circle Background behind image */}
           <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 rounded-full blur-2xl opacity-60 ${theme === 'dark' ? 'bg-[#cea29b]' : 'bg-[#eaddd5]'}`} />
-          
-          <img 
-            src={imageUrl || "https://picsum.photos/300/300"} 
+
+          <img
+            src={imageUrl || "https://picsum.photos/300/300"}
             alt={title}
             className="absolute bottom-0 right-0 w-full h-[90%] object-cover object-top mask-image-linear"
             style={{
