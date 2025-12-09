@@ -43,27 +43,27 @@ const App: React.FC = () => {
 
         {/* Hero Section - Modern & Compact (Headshot Focus) */}
         <header className="relative overflow-hidden pb-4">
-          {/* Hero Image Container - Significantly Reduced Height */}
-          <div className="relative w-full h-[220px] overflow-hidden group">
-            {/* Gradient Overlay for integration */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#f6f5f2]/10 to-[#f6f5f2] z-10"></div>
+          {/* Hero Image Container - Adjusted Height for full head visibility */}
+          <div className="relative w-full h-[280px] overflow-hidden group">
+            {/* Gradient Overlay for integration - Suavizado */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#f6f5f2] z-10"></div>
 
-            {/* Main Hero Image - Zoomed in on Face */}
+            {/* Main Hero Image - No Zoom, Perfect Fit */}
             <img
               src="/images/hero-new.png"
               alt="Gislaine Coltz"
-              className="w-full h-full object-cover transform transition-transform duration-[2s] ease-in-out group-hover:scale-130"
+              className="w-full h-full object-cover transition-transform duration-[2s] ease-in-out group-hover:scale-105"
               style={{
-                objectPosition: 'center 5%', // Focus rigidamente no topo/rosto
-                transform: 'scale(1.25)', // Zoom para cortar o corpo (mostrar só a cabeça)
-                maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%)',
-                WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%)'
+                objectPosition: 'center top', // Alinha no topo para mostrar a cabeça
+                // Removed scale(1.25) to avoid cropping margins
+                maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)'
               }}
             />
           </div>
 
-          {/* Title Section - Modern & Impactful */}
-          <div className="relative -mt-16 px-6 text-center z-20">
+          {/* Title Section - Adjusted Position */}
+          <div className="relative -mt-8 px-6 text-center z-20">
             <div className="inline-block relative">
               {/* Decorative Blur behind text */}
               <div className="absolute inset-0 bg-[#f6f5f2]/80 blur-xl -z-10 rounded-full"></div>
