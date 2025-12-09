@@ -41,22 +41,23 @@ const App: React.FC = () => {
 
       <div className="max-w-md mx-auto min-h-screen pb-20 bg-[#f6f5f2]/60 backdrop-blur-xl shadow-2xl border-x border-[#eaddd5]/40">
 
-        {/* Hero Section - Modern & Compact */}
-        <header className="relative overflow-hidden pb-8">
-          {/* Hero Image Container - Reduced Height */}
-          <div className="relative w-full h-[380px] overflow-hidden group">
+        {/* Hero Section - Modern & Compact (Headshot Focus) */}
+        <header className="relative overflow-hidden pb-4">
+          {/* Hero Image Container - Significantly Reduced Height */}
+          <div className="relative w-full h-[220px] overflow-hidden group">
             {/* Gradient Overlay for integration */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#f6f5f2]/20 to-[#f6f5f2] z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#f6f5f2]/10 to-[#f6f5f2] z-10"></div>
 
-            {/* Main Hero Image with Hover Effect */}
+            {/* Main Hero Image - Zoomed in on Face */}
             <img
-              src="/images/gislaine-perfil.png"
+              src="/images/hero-new.png"
               alt="Gislaine Coltz"
-              className="w-full h-full object-cover object-top transform transition-transform duration-[2s] ease-in-out group-hover:scale-105"
+              className="w-full h-full object-cover transform transition-transform duration-[2s] ease-in-out group-hover:scale-130"
               style={{
-                objectPosition: 'center 15%',
-                maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)',
-                WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)'
+                objectPosition: 'center 5%', // Focus rigidamente no topo/rosto
+                transform: 'scale(1.25)', // Zoom para cortar o corpo (mostrar só a cabeça)
+                maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%)'
               }}
             />
           </div>
@@ -93,7 +94,7 @@ const App: React.FC = () => {
             title="Cursos Presenciais"
             buttonText="Acesse Agora"
             theme="dark"
-            imageUrl="/images/card-cursos-presenciais.jpg"
+            imageUrl="/images/card-cursos-new.png"
             onClick={() => handleNavigation('#presenciais')}
           />
 
@@ -104,7 +105,7 @@ const App: React.FC = () => {
             subtitle="Método Exclusivo"
             buttonText="Começar Agora"
             theme="peach"
-            imageUrl="/images/card-curso-drenagem.jpg"
+            imageUrl="/images/card-drenagem-new.png"
             onClick={() => handleNavigation('#drenagem')}
           />
 
@@ -115,7 +116,7 @@ const App: React.FC = () => {
             subtitle="Clínica Estética"
             buttonText="Entre em Contato"
             theme="light"
-            imageUrl="/images/card-agendar.jpg"
+            imageUrl="/images/card-agendar-new.png"
             onClick={() => handleNavigation('#agendar')}
           />
 
