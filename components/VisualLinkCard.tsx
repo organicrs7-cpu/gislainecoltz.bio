@@ -9,7 +9,8 @@ export const VisualLinkCard: React.FC<LinkCardProps> = ({
   imageUrl,
   theme,
   onClick,
-  type
+  type,
+  badgeText
 }) => {
   // Theme configuration based on the brand manual colors
   // Strictly using: #eaddd5, #9d6a6b, #cea29b, #f6f5f2, #d8d4c9
@@ -53,10 +54,10 @@ export const VisualLinkCard: React.FC<LinkCardProps> = ({
       <div className="flex h-full">
         {/* Left Content */}
         <div className="flex-1 p-5 flex flex-col justify-center z-10 relative">
-          {type === 'course' && (
+          {type === 'course' && badgeText && (
             <div className={`inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest mb-2 w-fit px-2 py-0.5 rounded ${currentTheme.badgeBg} ${currentTheme.badgeText}`}>
               <PlayCircle size={10} />
-              Curso Presencial
+              {badgeText}
             </div>
           )}
 

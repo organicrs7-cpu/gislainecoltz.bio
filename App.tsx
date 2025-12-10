@@ -90,6 +90,7 @@ const App: React.FC = () => {
             buttonText="Vagas Fechadas"
             theme="dark"
             imageUrl="/images/card-cursos-new.png"
+            badgeText="CURSO PRESENCIAL"
             onClick={() => handleNavigation(WHATSAPP_LINK)}
           />
 
@@ -101,6 +102,7 @@ const App: React.FC = () => {
             buttonText="Entrar na Lista VIP"
             theme="peach"
             imageUrl="/images/card-drenagem-new.png"
+            badgeText="CURSO ONLINE"
             onClick={() => handleNavigation(WHATSAPP_LINK)}
           />
 

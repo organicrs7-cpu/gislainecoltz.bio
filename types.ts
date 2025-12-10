@@ -17,4 +17,5 @@ export interface LinkCardProps {
   theme: 'light' | 'dark' | 'peach';
   onClick: () => void;
   icon?: React.ReactNode;
+  badgeText?: string;
 }
