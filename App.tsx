@@ -97,7 +97,7 @@ const App: React.FC = () => {
           {/* Card 4: Drenagem Online (Requested) */}
           <VisualLinkCard
             type="course"
-            title="Curso de Drenagem Online"
+            title="Curso de Drenagem"
             subtitle="Método Exclusivo"
             buttonText="Entrar na Lista VIP"
             theme="peach"
