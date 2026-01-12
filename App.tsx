@@ -92,6 +92,12 @@ const App: React.FC = () => {
             theme="peach"
             imageUrl="/images/card-drenagem-new.png"
             badgeText="CURSO ONLINE"
+            extraContent={
+              <div className="flex flex-col">
+                <span className="text-[10px] opacity-70 line-through text-[#9d6a6b]">De R$ 997</span>
+                <span className="text-xs font-bold text-[#9d6a6b]">Apenas R$ 486,00</span>
+              </div>
+            }
             onClick={() => handleNavigation("https://gislaine-coltz.vercel.app/")}
           />
 
