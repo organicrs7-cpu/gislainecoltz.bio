@@ -108,7 +108,7 @@ const App: React.FC = () => {
             subtitle="Manta Térmica"
             buttonText="Garantir Vaga"
             theme="dark"
-            imageUrl="/images/card-detox-new.png"
+            imageUrl="/images/card-detox-new.jpg"
             badgeText="CURSO ONLINE"
             extraContent={
               <div className="flex flex-col">
