@@ -94,8 +94,7 @@ const App: React.FC = () => {
             badgeText="CURSO ONLINE"
             extraContent={
               <div className="flex flex-col">
-                <span className="text-[10px] opacity-70 line-through text-[#9d6a6b]">De R$ 997</span>
-                <span className="text-xs font-bold text-[#9d6a6b]">Apenas R$ 486,00</span>
+                <span className="text-[10px] font-bold text-[#9d6a6b] mb-1 bg-white/40 px-1.5 py-0.5 rounded w-fit">Use cupom: gi40 (40% OFF)</span>
               </div>
             }
             onClick={() => handleNavigation("https://gislaine-coltz.vercel.app/")}
